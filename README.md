@@ -6,7 +6,7 @@ Serverless template for AWS projects with NodeJS as Lambda functions runtime.
 
 Use this template to bootstrap a new project
 ```bash
-serverless create --template-url https://github.com/serverless/serverless/tree/master/ --path myService
+serverless create --template-url https://github.com/daaru00/serverless-template/tree/master/ --path myService
 ```
 
 Install NPM dependencies
