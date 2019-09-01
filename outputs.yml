@@ -1,0 +1,8 @@
+Outputs:
+  HelloLambdaFunction:
+    Value: 
+      Fn::GetAtt: [HelloLambdaFunction, Arn]
+    Description: My hello lambda function from ${self:service} service, using ${self:provider.stage} stage
+    Export:
+      Name: ${self:service}-${self:provider.stage}-HelloLambdaFunction
+

@@ -1,0 +1,26 @@
+service: myproject
+
+plugins:
+  - serverless-iam-roles-per-function
+
+provider:
+  name: aws
+  profile: ${opt:profile, 'personal'}
+  runtime: nodejs10.x
+  stage: ${opt:stage, env:SERVERLESS_STAGE, 'demo'}
+  region: ${opt:region, env:AWS_DEFAULT_REGION, 'eu-west-1'}
+
+custom:
+  serverless-iam-roles-per-function:
+    defaultInherit: true
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: post
+
+resources:
+  - ${file(outputs.yml)}
