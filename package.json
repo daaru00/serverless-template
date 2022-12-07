@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "serverless": "^1.48.4",
+    "serverless": "^3.25.1",
     "serverless-iam-roles-per-function": "^2.0.1"
   },
   "dependencies": {
